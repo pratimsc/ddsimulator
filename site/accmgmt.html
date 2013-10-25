@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Account Statement</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+        <!--Local CSS Override -->
+        <link href="css/local.css" rel="stylesheet" media="screen">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="../../assets/js/html5shiv.js"></script>
+          <script src="../../assets/js/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <header>
+
+
+            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">    
+                <p class="logo" >&nbsp;</p>
+                <div class="navbar-header">
+                    <div class="navbar-brand">                   
+                        <a href="/"> Account Statement Simulator</a>
+                    </div>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    
+                </div>
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul  class="nav nav-pills">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Account Management
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Search</a></li>
+                                <li><a href="#">Register</a></li>
+                            </ul>
+                        </li>
+                        <li >
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Payment Management
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Search</a></li>
+                                <li><a href="#">Register</a></li>
+                            </ul>
+                        </li>
+                        <li >
+                            <a href="#" class="dropdown-toggle"  data-toggle="dropdown"> 
+                                Transaction Management
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Search</a></li>
+                                <li><a href="#">Register</a></li>
+                            </ul>
+                        </li>                        
+                    </ul>
+                </div>
+            </nav> 
+        </header>
+
+        <div class="acc_search_breadcrumb">
+            <ul class="breadcrumb">
+                <li><a href="/">Home</a></li>
+                <li><a href="#">Account Management</a></li>
+                <li class="active">Search Account</li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <!-- Here the search control section goes here-->
+            <div class="row">
+                <form role="form" class="form-inline col-md-12">
+                    <div class="form-group col-md-4">
+                        <label class="sr-only" for="accsearchkeys">Search Text</label>
+                        <input id="searchkeys" type="search" placeholder="Enter keyword(s) to find account" class="form-control">                
+                    </div>
+                    <div class="col-md-6">
+                        <button type="submit" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-search" title="Search"></span>&nbsp;Search!
+                        </button>
+                        <button type="reset" class="btn btn-default">
+                            <span class=" glyphicon glyphicon-remove-circle"></span>&nbsp;Clear
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+
+            <!--Below section will deal with Search result functionality-->
+
+         
+                <section class="account_search_result col-md-12">
+                    <!-- Search Result of the search goes-->
+                    <header class="sr-only">
+                        <p>Account search result</p>
+                    </header>
+
+                    <article class="account_article panel panel-default">
+                        <header class="panel-heading">
+                            <strong class="panel-title">Account Number : xyz1</strong>                
+                        </header>
+                        <table class="table table-hover">
+                            <tbody>
+                                <tr>
+                                    <th>Account Name</th>
+                                    <th>My dummy Account 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</th>
+                                </tr>
+                                <tr>
+                                    <th>Currency</th>
+                                    <th>GBP</th>
+                                </tr>
+                                <tr>
+                                    <th>Account Type</th>
+                                    <th>General Account</th>
+                                </tr>
+                                <tr>
+                                    <th>Account Ledger Balance</th>
+                                    <th>999999999.99</th>
+                                </tr>
+                                <tr>
+                                    <th>Account Available Balance</th>
+                                    <th>999999999.99</th>
+                                </tr>
+                            </tbody>
+                        </table>    
+                        <div class="panel-footer">
+                            <button type="button" class="btn btn-default" >View Details</button>
+                            <button type="button" class="btn btn-default" >View Payment</button>
+                            <button type="button" class="btn btn-default" > View Transaction</button>
+                        </div>
+                    </article>
+                    <article class="account_article panel panel-default">
+                        <header class="panel-heading">
+                            <strong class="panel-title">Account Number : xyz2</strong>
+                        </header>                    
+                        <table class="account_summary table table-hover">
+                            <tbody>
+                                <tr>
+                                    <th>Account Name</th>
+                                    <th>My dummy Account 2</th>
+                                </tr>
+                                <tr>
+                                    <th>Currency</th>
+                                    <th>GBP</th>
+                                </tr>
+                                <tr>
+                                    <th>Account Type</th>
+                                    <th>General Account</th>
+                                </tr>
+                                <tr>
+                                    <th>Account Ledger Balance</th>
+                                    <th>999999999.99</th>
+                                </tr>
+                                <tr>
+                                    <th>Account Available Balance</th>
+                                    <th>999999999.99</th>
+                                </tr>
+                            </tbody>
+                        </table>    
+                        <div class="panel-footer">
+                            <button type="button" class="btn btn-default" >View Details</button>
+                            <button type="button" class="btn btn-default" >View Payment</button>
+                            <button type="button" class="btn btn-default" > View Transaction</button>
+                        </div>
+                    </article>
+                    <article class="account_article panel panel-default">
+                        <header class="panel-heading">
+                            <strong class="panel-title">Account Number : xyz3</strong>
+                        </header>                    
+                        <table class="account_summary table table-hover">
+                            <tbody>
+                                <tr>
+                                    <th>Account Name</th>
+                                    <th>My dummy Account 3</th>
+                                </tr>
+                                <tr>
+                                    <th>Currency</th>
+                                    <th>GBP</th>
+                                </tr>
+                                <tr>
+                                    <th>Account Type</th>
+                                    <th>General Account</th>
+                                </tr>
+                                <tr>
+                                    <th>Account Ledger Balance</th>
+                                    <th>999999999.99</th>
+                                </tr>
+                                <tr>
+                                    <th>Account Available Balance</th>
+                                    <th>999999999.99</th>
+                                </tr>
+                            </tbody>
+                        </table>    
+                        <div class="panel-footer">
+                            <button type="button" class="btn btn-default" >View Details</button>
+                            <button type="button" class="btn btn-default" >View Payment</button>
+                            <button type="button" class="btn btn-default" > View Transaction</button>
+                        </div>
+                    </article>
+                    <article class="account_article panel panel-default">
+                        <header class="panel-heading">
+                            <strong class="panel-title">Account Number : xyz4</strong>
+                        </header>                    
+                        <table class="account_summary table table-hover">
+                            <tbody>
+                                <tr>
+                                    <th>Account Name</th>
+                                    <th>My dummy Account 4</th>
+                                </tr>
+                                <tr>
+                                    <th>Currency</th>
+                                    <th>GBP</th>
+                                </tr>
+                                <tr>
+                                    <th>Account Type</th>
+                                    <th>General Account</th>
+                                </tr>
+                                <tr>
+                                    <th>Account Ledger Balance</th>
+                                    <th>999999999.99</th>
+                                </tr>
+                                <tr>
+                                    <th>Account Available Balance</th>
+                                    <th>999999999.99</th>
+                                </tr>
+                            </tbody>
+                        </table>    
+                        <div class="panel-footer">
+                            <button type="button" class="btn btn-default" >View Details</button>
+                            <button type="button" class="btn btn-default" >View Payment</button>
+                            <button type="button" class="btn btn-default" > View Transaction</button>
+                        </div>
+                    </article>
+                    <article class="account_article panel panel-default">
+                        <header class="panel-heading">
+                            <strong class="panel-title">Account Number : xyz5</strong>
+                        </header>                    
+                        <table class="account_summary table table-hover">
+                            <tbody>
+                                <tr>
+                                    <th>Account Name</th>
+                                    <th>My dummy Account 5</th>
+                                </tr>
+                                <tr>
+                                    <th>Currency</th>
+                                    <th>GBP</th>
+                                </tr>
+                                <tr>
+                                    <th>Account Type</th>
+                                    <th>General Account</th>
+                                </tr>
+                                <tr>
+                                    <th>Account Ledger Balance</th>
+                                    <th>999999999.99</th>
+                                </tr>
+                                <tr>
+                                    <th>Account Available Balance</th>
+                                    <th>999999999.99</th>
+                                </tr>
+                            </tbody>
+                        </table>    
+                        <div class="panel-footer">
+                            <button type="button" class="btn btn-default" >View Details</button>
+                            <button type="button" class="btn btn-default" >View Payment</button>
+                            <button type="button" class="btn btn-default" > View Transaction</button>
+                        </div>
+                    </article>
+                    <article class="account_article panel panel-default">
+                        <header class="panel-heading">
+                            <strong class="panel-title">Account Number : xyz6</strong>
+                        </header>                    
+                        <table class="account_summary table table-hover">
+                            <tbody>
+                                <tr>
+                                    <th>Account Name</th>
+                                    <th>My dummy Account 6</th>
+                                </tr>
+                                <tr>
+                                    <th>Currency</th>
+                                    <th>GBP</th>
+                                </tr>
+                                <tr>
+                                    <th>Account Type</th>
+                                    <th>General Account</th>
+                                </tr>
+                                <tr>
+                                    <th>Account Ledger Balance</th>
+                                    <th>999999999.99</th>
+                                </tr>
+                                <tr>
+                                    <th>Account Available Balance</th>
+                                    <th>999999999.99</th>
+                                </tr>
+                            </tbody>
+                        </table>    
+                        <div class="panel-footer">
+                            <button type="button" class="btn btn-default" >View Details</button>
+                            <button type="button" class="btn btn-default" >View Payment</button>
+                            <button type="button" class="btn btn-default" > View Transaction</button>
+                        </div>
+                    </article>
+
+                    <footer   class="col-md-10 col-md-offset-0">
+                        <ul class="pagination">
+                            <li><a href="#">&laquo;</a></li>
+                            <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">&raquo;</a></li>
+                        </ul>
+                    </footer>
+                </section>
+
+            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+            <script src="js/jquery-2.0.3.js"></script>
+            <!-- Include all compiled plugins (below), or include individual files as needed -->
+            <script src="js/bootstrap.js"></script>
+    </body>
+</html>
