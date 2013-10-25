@@ -1,0 +1,77 @@
+
+$account-article-margin:1px;
+$account-article-padding:1px;
+$barclays-logo-color:#5FC2C9;
+$color-base: #797979;
+$context-width: 1600;
+$target-width-acc-article: 500;
+$target-margin-acc-article: 5;
+
+
+.group {
+    zoom: 1;
+    &:before,
+        &:after {
+        content: '';
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+html{
+    font-size: percentage(10/16);
+}
+body {
+    min-height: 100em;        
+    line-height: 1.5em;
+    padding-top: 9em;
+}
+
+.control{
+    clear: both;
+    float: left;
+}
+
+@media screen and (max-width:500px){
+    body {
+        padding-top: 15em; 
+    }
+}
+.logo {
+    background:url("../images/donkey_sketch.jpg") no-repeat;
+    background-size: auto 100% ;
+    font-size: 2em;    
+    height: 75px;
+    width: 75px;     
+    content: " ";
+    float: left;
+}
+.account_search_result{
+    clear:both;
+    float:left;
+    width: inherit;
+    .account_article{
+        float: left;
+        min-width: percentage($target-width-acc-article / $context-width);
+        margin: percentage($target-margin-acc-article / $context-width);
+        table tbody tr{
+            th:first-child{
+                color:rbga(#919191,0.8);
+            }
+            th:last-child{                                
+                color: rgba(#444245,0.8);
+                font-size: 1.1em;                
+            }
+        }
+        .btn{
+            background-color: rgba($barclays-logo-color,0.1);
+            color: complement($barclays-logo-color);
+            width:32%;
+        }
+    }
+    footer{        
+        clear: both;
+        float: left;
+    }
+}
