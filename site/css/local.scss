@@ -1,11 +1,12 @@
-$account-article-margin:1px;
-$account-article-padding:1px;
+@import 'bootstrap';
+
 $barclays-logo-color:#5FC2C9;
-$color-base: #797979;
 $context-width: 1600;
 $target-width-acc-article: 500;
 $target-margin-acc-article: 5;
-
+$account_background_color: #f5f5f0;
+$account_font_color: #333333;
+$account_border_color: #dddddd;
 
 .group {
     zoom: 1;
@@ -37,36 +38,61 @@ body {
         padding-top: 15em; 
     }
 }
+
 .logo {
     background:url("../images/donkey_sketch.jpg") no-repeat;
     background-size: auto 100% ;
     font-size: 2em;    
     height: 75px;
     width: 75px;     
-    content: " ";
+    content: '';
     float: left;
 }
-.account_search_result{
+.acc_search_control{
+    margin-bottom: 4em;
+}
+.accounts{
     clear:both;
     float:left;
-    width: inherit;
-    .account_article{
+    width: 100%;
+    .account{
         float: left;
         min-width: percentage($target-width-acc-article / $context-width);
-        margin: percentage($target-margin-acc-article / $context-width);
-        table tbody tr{
-            th:first-child{
-                color:rbga(#919191,0.8);
-            }
-            th:last-child{                                
-                color: rgba(#444245,0.8);
-                font-size: 1.1em;                
-            }
+        margin: percentage($target-margin-acc-article / $context-width);        
+        border-radius: 1em;
+        header{
+            background-image: -webkit-gradient(linear, left 0%, left 100%, from($account_background_color), to(complement($account_background_color)));
+            background-image: -webkit-linear-gradient(top, $account_background_color, 0%, complement($account_background_color), 100%);
+            background-image: -moz-linear-gradient(top, $account_background_color 0%, complement($account_background_color) 100%);
+            background-image: linear-gradient(to bottom, $account_background_color 0%, complement($account_background_color) 100%);
+            background-repeat: repeat-x;
+            color: $account_font_color ;
+            background-color: $account_background_color;
+            border-color: $account_border_color;
+            padding: 10px 15px;
+            border-bottom: 1px solid transparent;
+            border-top-right-radius: 1em;
+            border-top-left-radius: 1em;
         }
+        .account_property_key{
+            color: rgba($account_font_color,0.6);
+        }
+        .account_property_value{                                
+            color: rgba($account_font_color,0.9);
+            font-size: 1.1em;
+        }        
         .btn{
             background-color: rgba($barclays-logo-color,0.1);
-            color: complement($barclays-logo-color);
-            width:32%;
+            color: complement($account_font_color);
+            width:percentage($target-width-acc-article / $context-width);
+        }
+
+        .account-nav-menu{
+            padding: 0.5em;
+            background-color: $account_background_color;
+            border-top: 1px solid $account_border_color;
+            border-bottom-right-radius: 1em;
+            border-bottom-left-radius: 1em;
         }
     }
     footer{        
