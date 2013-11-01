@@ -3,8 +3,9 @@
     <head>
         <title>Account Statement</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Bootstrap -->
-        <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+        <!-- Bootstrap 
+        <link href="css/_bootstrap.css" rel="stylesheet" media="screen">
+        -->
         <!--Local CSS Override -->
         <link href="css/local.css" rel="stylesheet" media="screen">
 
@@ -16,8 +17,6 @@
     </head>
     <body>
         <header>
-
-
             <nav class="navbar navbar-default navbar-fixed-top" role="navigation">    
                 <p class="logo" >&nbsp;</p>
                 <div class="navbar-header">
@@ -30,7 +29,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    
+
                 </div>
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul  class="nav nav-pills">
@@ -79,252 +78,254 @@
         <div class="content">
             <!-- Here the search control section goes here-->
             <div class="row">
-                <form role="form" class="form-inline col-md-12">
-                    <div class="form-group col-md-4">
-                        <label class="sr-only" for="accsearchkeys">Search Text</label>
-                        <input id="searchkeys" type="search" placeholder="Enter keyword(s) to find account" class="form-control">                
-                    </div>
-                    <div class="col-md-6">
-                        <button type="submit" class="btn btn-primary">
-                            <span class="glyphicon glyphicon-search" title="Search"></span>&nbsp;Search!
-                        </button>
-                        <button type="reset" class="btn btn-default">
-                            <span class=" glyphicon glyphicon-remove-circle"></span>&nbsp;Clear
-                        </button>
-                    </div>
-                </form>
+                <div class="acc_search_control">
+                    <form role="form" class="form-inline col-md-12">
+                        <div class="form-group col-md-4">
+                            <label class="sr-only" for="accsearchkeys">Search Text</label>
+                            <input id="searchkeys" type="search" placeholder="Enter keyword(s) to find account" class="form-control">                
+                        </div>
+                        <div class="col-md-6">
+                            <button type="submit" class="btn btn-primary">
+                                <span class="glyphicon glyphicon-search" title="Search"></span>&nbsp;Search!
+                            </button>
+                            <button type="reset" class="btn btn-default">
+                                <span class=" glyphicon glyphicon-remove-circle"></span>&nbsp;Clear
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
 
 
             <!--Below section will deal with Search result functionality-->
 
-         
-                <section class="account_search_result col-md-12">
-                    <!-- Search Result of the search goes-->
-                    <header class="sr-only">
-                        <p>Account search result</p>
+
+            <section class="accounts col-md-12">
+                <!-- Search Result of the search goes-->
+                <header class="sr-only">
+                    <p>Account search result</p>
+                </header>
+
+                <article class="account panel panel-default">
+                    <header>
+                        <strong class="panel-title">Account Number : xyz1</strong>                
                     </header>
+                    <table class="table table-hover">
+                        <tbody>
+                            <tr>
+                                <th class="account_property_key">Account Name</th>
+                                <th class="account_property_value">My dummy Account 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</th>
+                            </tr>
+                            <tr>
+                                <th class="account_property_key">Currency</th>
+                                <th class="account_property_value">GBP</th>
+                            </tr>
+                            <tr>
+                                <th class="account_property_key">Account Type</th>
+                                <th class="account_property_value">General Account</th>
+                            </tr>
+                            <tr>
+                                <th class="account_property_key">Account Ledger Balance</th>
+                                <th class="account_property_value">999999999.99</th>
+                            </tr>
+                            <tr>
+                                <th class="account_property_key">Account Available Balance</th>
+                                <th class="account_property_value">999999999.99</th>
+                            </tr>
+                        </tbody>
+                    </table>    
+                    <div class="account-nav-menu">
+                        <button type="button" class="btn btn-default" >View Details</button>
+                        <button type="button" class="btn btn-default" >View Payment</button>
+                        <button type="button" class="btn btn-default" > View Transaction</button>
+                    </div>
+                </article>
+                <article class="account  panel panel-default">
+                    <header>
+                        <strong class="panel-title">Account Number : xyz2</strong>
+                    </header>                    
+                    <table class="account_summary table table-hover">
+                        <tbody>
+                            <tr>
+                                <th class="account_property_key">Account Name</th>
+                                <th class="account_property_value">My dummy Account2</th>
+                            </tr>
+                            <tr>
+                                <th class="account_property_key">Currency</th>
+                                <th class="account_property_value">GBP</th>
+                            </tr>
+                            <tr>
+                                <th class="account_property_key">Account Type</th>
+                                <th class="account_property_value">General Account</th>
+                            </tr>
+                            <tr>
+                                <th class="account_property_key">Account Ledger Balance</th>
+                                <th class="account_property_value">999999999.99</th>
+                            </tr>
+                            <tr>
+                                <th class="account_property_key">Account Available Balance</th>
+                                <th class="account_property_value">999999999.99</th>
+                            </tr>
+                        </tbody>
+                    </table>    
+                    <div class="account-nav-menu">
+                        <button type="button" class="btn btn-default" >View Details</button>
+                        <button type="button" class="btn btn-default" >View Payment</button>
+                        <button type="button" class="btn btn-default" > View Transaction</button>
+                    </div>
+                </article>
+                <article class="account  panel panel-default">
+                    <header>
+                        <strong class="panel-title">Account Number : xyz3</strong>
+                    </header>                    
+                    <table class="account_summary table table-hover">
+                        <tbody>
+                            <tr>
+                                <th class="account_property_key">Account Name</th>
+                                <th class="account_property_value">My dummy Account3</th>
+                            </tr>
+                            <tr>
+                                <th class="account_property_key">Currency</th>
+                                <th class="account_property_value">GBP</th>
+                            </tr>
+                            <tr>
+                                <th class="account_property_key">Account Type</th>
+                                <th class="account_property_value">General Account</th>
+                            </tr>
+                            <tr>
+                                <th class="account_property_key">Account Ledger Balance</th>
+                                <th class="account_property_value">999999999.99</th>
+                            </tr>
+                            <tr>
+                                <th class="account_property_key">Account Available Balance</th>
+                                <th class="account_property_value">999999999.99</th>
+                            </tr>
+                        </tbody>
+                    </table>    
+                    <div class="account-nav-menu">
+                        <button type="button" class="btn btn-default" >View Details</button>
+                        <button type="button" class="btn btn-default" >View Payment</button>
+                        <button type="button" class="btn btn-default" > View Transaction</button>
+                    </div>
+                </article>
+                <article class="account  panel panel-default">
+                    <header>
+                        <strong class="panel-title">Account Number : xyz4</strong>
+                    </header>                    
+                    <table class="account_summary table table-hover">
+                        <tbody>
+                            <tr>
+                                <th class="account_property_key">Account Name</th>
+                                <th class="account_property_value">My dummy Account4</th>
+                            </tr>
+                            <tr>
+                                <th class="account_property_key">Currency</th>
+                                <th class="account_property_value">GBP</th>
+                            </tr>
+                            <tr>
+                                <th class="account_property_key">Account Type</th>
+                                <th class="account_property_value">General Account</th>
+                            </tr>
+                            <tr>
+                                <th class="account_property_key">Account Ledger Balance</th>
+                                <th class="account_property_value">999999999.99</th>
+                            </tr>
+                            <tr>
+                                <th class="account_property_key">Account Available Balance</th>
+                                <th class="account_property_value">999999999.99</th>
+                            </tr>
+                        </tbody>
+                    </table>    
+                    <div class="account-nav-menu">
+                        <button type="button" class="btn btn-default" >View Details</button>
+                        <button type="button" class="btn btn-default" >View Payment</button>
+                        <button type="button" class="btn btn-default" > View Transaction</button>
+                    </div>
+                </article>
+                <article class="account  panel panel-default">
+                    <header>
+                        <strong class="panel-title">Account Number : xyz5</strong>
+                    </header>                    
+                    <table class="account_summary table table-hover">
+                        <tbody>
+                            <tr>
+                                <th class="account_property_key">Account Name</th>
+                                <th class="account_property_value">My dummy Account5</th>
+                            </tr>
+                            <tr>
+                                <th class="account_property_key">Currency</th>
+                                <th class="account_property_value">GBP</th>
+                            </tr>
+                            <tr>
+                                <th class="account_property_key">Account Type</th>
+                                <th class="account_property_value">General Account</th>
+                            </tr>
+                            <tr>
+                                <th class="account_property_key">Account Ledger Balance</th>
+                                <th class="account_property_value">999999999.99</th>
+                            </tr>
+                            <tr>
+                                <th class="account_property_key">Account Available Balance</th>
+                                <th class="account_property_value">999999999.99</th>
+                            </tr>
+                        </tbody>
+                    </table>    
+                    <div class="account-nav-menu">
+                        <button type="button" class="btn btn-default" >View Details</button>
+                        <button type="button" class="btn btn-default" >View Payment</button>
+                        <button type="button" class="btn btn-default" > View Transaction</button>
+                    </div>
+                </article>
+                <article class="account  panel panel-default">
+                    <header>
+                        <strong class="panel-title">Account Number : xyz6</strong>
+                    </header>                    
+                    <table class="account_summary table table-hover">
+                        <tbody>
+                            <tr>
+                                <th class="account_property_key">Account Name</th>
+                                <th class="account_property_value">My dummy Account6</th>
+                            </tr>
+                            <tr>
+                                <th class="account_property_key">Currency</th>
+                                <th class="account_property_value">GBP</th>
+                            </tr>
+                            <tr>
+                                <th class="account_property_key">Account Type</th>
+                                <th class="account_property_value">General Account</th>
+                            </tr>
+                            <tr>
+                                <th class="account_property_key">Account Ledger Balance</th>
+                                <th class="account_property_value">999999999.99</th>
+                            </tr>
+                            <tr>
+                                <th class="account_property_key">Account Available Balance</th>
+                                <th class="account_property_value">999999999.99</th>
+                            </tr>
+                        </tbody>
+                    </table>    
+                    <div class="account-nav-menu">
+                        <button type="button" class="btn btn-default" >View Details</button>
+                        <button type="button" class="btn btn-default" >View Payment</button>
+                        <button type="button" class="btn btn-default" > View Transaction</button>
+                    </div>
+                </article>
 
-                    <article class="account_article panel panel-default">
-                        <header class="panel-heading">
-                            <strong class="panel-title">Account Number : xyz1</strong>                
-                        </header>
-                        <table class="table table-hover">
-                            <tbody>
-                                <tr>
-                                    <th>Account Name</th>
-                                    <th>My dummy Account 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</th>
-                                </tr>
-                                <tr>
-                                    <th>Currency</th>
-                                    <th>GBP</th>
-                                </tr>
-                                <tr>
-                                    <th>Account Type</th>
-                                    <th>General Account</th>
-                                </tr>
-                                <tr>
-                                    <th>Account Ledger Balance</th>
-                                    <th>999999999.99</th>
-                                </tr>
-                                <tr>
-                                    <th>Account Available Balance</th>
-                                    <th>999999999.99</th>
-                                </tr>
-                            </tbody>
-                        </table>    
-                        <div class="panel-footer">
-                            <button type="button" class="btn btn-default" >View Details</button>
-                            <button type="button" class="btn btn-default" >View Payment</button>
-                            <button type="button" class="btn btn-default" > View Transaction</button>
-                        </div>
-                    </article>
-                    <article class="account_article panel panel-default">
-                        <header class="panel-heading">
-                            <strong class="panel-title">Account Number : xyz2</strong>
-                        </header>                    
-                        <table class="account_summary table table-hover">
-                            <tbody>
-                                <tr>
-                                    <th>Account Name</th>
-                                    <th>My dummy Account 2</th>
-                                </tr>
-                                <tr>
-                                    <th>Currency</th>
-                                    <th>GBP</th>
-                                </tr>
-                                <tr>
-                                    <th>Account Type</th>
-                                    <th>General Account</th>
-                                </tr>
-                                <tr>
-                                    <th>Account Ledger Balance</th>
-                                    <th>999999999.99</th>
-                                </tr>
-                                <tr>
-                                    <th>Account Available Balance</th>
-                                    <th>999999999.99</th>
-                                </tr>
-                            </tbody>
-                        </table>    
-                        <div class="panel-footer">
-                            <button type="button" class="btn btn-default" >View Details</button>
-                            <button type="button" class="btn btn-default" >View Payment</button>
-                            <button type="button" class="btn btn-default" > View Transaction</button>
-                        </div>
-                    </article>
-                    <article class="account_article panel panel-default">
-                        <header class="panel-heading">
-                            <strong class="panel-title">Account Number : xyz3</strong>
-                        </header>                    
-                        <table class="account_summary table table-hover">
-                            <tbody>
-                                <tr>
-                                    <th>Account Name</th>
-                                    <th>My dummy Account 3</th>
-                                </tr>
-                                <tr>
-                                    <th>Currency</th>
-                                    <th>GBP</th>
-                                </tr>
-                                <tr>
-                                    <th>Account Type</th>
-                                    <th>General Account</th>
-                                </tr>
-                                <tr>
-                                    <th>Account Ledger Balance</th>
-                                    <th>999999999.99</th>
-                                </tr>
-                                <tr>
-                                    <th>Account Available Balance</th>
-                                    <th>999999999.99</th>
-                                </tr>
-                            </tbody>
-                        </table>    
-                        <div class="panel-footer">
-                            <button type="button" class="btn btn-default" >View Details</button>
-                            <button type="button" class="btn btn-default" >View Payment</button>
-                            <button type="button" class="btn btn-default" > View Transaction</button>
-                        </div>
-                    </article>
-                    <article class="account_article panel panel-default">
-                        <header class="panel-heading">
-                            <strong class="panel-title">Account Number : xyz4</strong>
-                        </header>                    
-                        <table class="account_summary table table-hover">
-                            <tbody>
-                                <tr>
-                                    <th>Account Name</th>
-                                    <th>My dummy Account 4</th>
-                                </tr>
-                                <tr>
-                                    <th>Currency</th>
-                                    <th>GBP</th>
-                                </tr>
-                                <tr>
-                                    <th>Account Type</th>
-                                    <th>General Account</th>
-                                </tr>
-                                <tr>
-                                    <th>Account Ledger Balance</th>
-                                    <th>999999999.99</th>
-                                </tr>
-                                <tr>
-                                    <th>Account Available Balance</th>
-                                    <th>999999999.99</th>
-                                </tr>
-                            </tbody>
-                        </table>    
-                        <div class="panel-footer">
-                            <button type="button" class="btn btn-default" >View Details</button>
-                            <button type="button" class="btn btn-default" >View Payment</button>
-                            <button type="button" class="btn btn-default" > View Transaction</button>
-                        </div>
-                    </article>
-                    <article class="account_article panel panel-default">
-                        <header class="panel-heading">
-                            <strong class="panel-title">Account Number : xyz5</strong>
-                        </header>                    
-                        <table class="account_summary table table-hover">
-                            <tbody>
-                                <tr>
-                                    <th>Account Name</th>
-                                    <th>My dummy Account 5</th>
-                                </tr>
-                                <tr>
-                                    <th>Currency</th>
-                                    <th>GBP</th>
-                                </tr>
-                                <tr>
-                                    <th>Account Type</th>
-                                    <th>General Account</th>
-                                </tr>
-                                <tr>
-                                    <th>Account Ledger Balance</th>
-                                    <th>999999999.99</th>
-                                </tr>
-                                <tr>
-                                    <th>Account Available Balance</th>
-                                    <th>999999999.99</th>
-                                </tr>
-                            </tbody>
-                        </table>    
-                        <div class="panel-footer">
-                            <button type="button" class="btn btn-default" >View Details</button>
-                            <button type="button" class="btn btn-default" >View Payment</button>
-                            <button type="button" class="btn btn-default" > View Transaction</button>
-                        </div>
-                    </article>
-                    <article class="account_article panel panel-default">
-                        <header class="panel-heading">
-                            <strong class="panel-title">Account Number : xyz6</strong>
-                        </header>                    
-                        <table class="account_summary table table-hover">
-                            <tbody>
-                                <tr>
-                                    <th>Account Name</th>
-                                    <th>My dummy Account 6</th>
-                                </tr>
-                                <tr>
-                                    <th>Currency</th>
-                                    <th>GBP</th>
-                                </tr>
-                                <tr>
-                                    <th>Account Type</th>
-                                    <th>General Account</th>
-                                </tr>
-                                <tr>
-                                    <th>Account Ledger Balance</th>
-                                    <th>999999999.99</th>
-                                </tr>
-                                <tr>
-                                    <th>Account Available Balance</th>
-                                    <th>999999999.99</th>
-                                </tr>
-                            </tbody>
-                        </table>    
-                        <div class="panel-footer">
-                            <button type="button" class="btn btn-default" >View Details</button>
-                            <button type="button" class="btn btn-default" >View Payment</button>
-                            <button type="button" class="btn btn-default" > View Transaction</button>
-                        </div>
-                    </article>
-
-                    <footer   class="col-md-10 col-md-offset-0">
-                        <ul class="pagination">
-                            <li><a href="#">&laquo;</a></li>
-                            <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">&raquo;</a></li>
-                        </ul>
-                    </footer>
-                </section>
-
-            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-            <script src="js/jquery-2.0.3.js"></script>
-            <!-- Include all compiled plugins (below), or include individual files as needed -->
-            <script src="js/bootstrap.js"></script>
+                <footer   class="col-md-10 col-md-offset-0">
+                    <ul class="pagination">
+                        <li><a href="#">&laquo;</a></li>
+                        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">&raquo;</a></li>
+                    </ul>
+                </footer>
+            </section>
+        </div>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="js/jquery-2.0.3.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.js"></script>
     </body>
 </html>
