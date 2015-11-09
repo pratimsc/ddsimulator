@@ -20,9 +20,6 @@ object TransactionCreator {
     val amount = new Money(scala.math.abs(payment.monetaryAmount.amountInMinorCurrency), payment.monetaryAmount.currencyCode)
     /*
      * Transaction Code and TLA code
-     * Check it at section 2.6 in the document -
-     * http://groupspaces.intranet.barclays.co.uk/sites/GCPS/ProductDocs/DirectData/9971735COM%20DirectData%20Customer%20Manual.pdf
-     * 
      * Transaction code 82 is for Debit and 85 is for Credit
      * Narrative 1 contains reference for Debits and Narrative 2 contains reference for Credits
      */
